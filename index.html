@@ -413,9 +413,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let displayHTML;
             if (name === "Kyeongha Rho") {
-                displayHTML = `<a class="author" href="${link}" target="_blank"><strong>${name}</strong></a>`;
+                displayHTML = `<a class="author" href="${link}" target="_blank" style="text-decoration: underline;"><strong>${name}</strong></a>`;
             } else {
-                displayHTML = `<a class="author" href="${link}" target="_blank">${name}</a>`;
+                displayHTML = `<a class="author" href="${link}" target="_blank" tyle="text-decoration: underline;">${name}</a>`;
             }
 
             div.innerHTML = div.innerHTML.replace(regex, displayHTML);
