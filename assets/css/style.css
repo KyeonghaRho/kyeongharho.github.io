@@ -147,16 +147,16 @@ body.dark-mode * {
     width: 100%;
     padding-top: 56.25%; /* 16:9 비율 유지 */
     background-color: transparent;
-  border: 2px solid #ccc;
+  border: 2px solid #dad9d9;
     border-radius: 0.5rem;
     position: relative;
 }
 
 .pub-thumbnail-image {
     width: 100%;          /* 부모 div 너비 100% */
-    max-width: 420px;     /* 최대 너비 제한 */
+    max-width: 560px;     /* 최대 너비 제한 */
     aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
-  border: 2px solid #ccc;
+  border: 2px solid #dad9d9;
     border-radius: 0.5rem;
     overflow: hidden;     /* 이미지가 넘치면 숨김 */
 }
