@@ -154,7 +154,7 @@ body.dark-mode * {
 
 .pub-thumbnail-image {
     width: 100%;          /* 부모 div 너비 100% */
-    max-width: 320px;     /* 최대 너비 제한 */
+    max-width: 420px;     /* 최대 너비 제한 */
     aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
   border: 2px solid #ccc;
     border-radius: 0.5rem;
