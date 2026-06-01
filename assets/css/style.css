@@ -15,10 +15,9 @@ a.author-bold-underline {
   color: #45505b;
 }
 .resume .resume-item {
-  /* padding: 0 0 10px 20px; */
-  padding: 0 0 10px 15px;
+  padding: 0 0 10px 20px;
   /* margin-top: 10px; */
-  margin-top: 0px;
+  margin-top: -5px;
   border-left: 2px solid #0563bb;
   position: relative;
 }
