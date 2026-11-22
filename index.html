@@ -465,6 +465,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const preview = document.createElement("img");
+    preview.className = "publication-preview";
+    preview.alt = "";
+    preview.hidden = true;
+    document.body.append(preview);
+
+    function showPreview(image) {
+        preview.src = image.currentSrc || image.src;
+        preview.style.setProperty("--preview-left", (image.getBoundingClientRect().right + 12) + "px");
+        preview.hidden = false;
+    }
+
+    function hidePreview() {
+        preview.hidden = true;
+    }
+
+    document.querySelectorAll("#pubs .pub-thumbnail-image img").forEach(image => {
+        image.tabIndex = 0;
+        image.addEventListener("pointerenter", event => {
+            if (event.pointerType === "mouse") showPreview(image);
+        });
+        image.addEventListener("pointerleave", hidePreview);
+        image.addEventListener("focus", () => {
+            if (image.matches(":focus-visible")) showPreview(image);
+        });
+        image.addEventListener("blur", hidePreview);
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") hidePreview();
+    });
+
     // 2) 시스템 다크모드 설정에 따라 자동 적용
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) {

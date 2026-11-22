@@ -175,3 +175,20 @@ body.dark-mode * {
     display: block; /* 아래 여백 제거 */
     object-fit: contain; /* 이미지 비율 유지하며 박스 내에 맞춤 */
 }
+
+.publication-preview {
+    --preview-width: min(800px, calc(100% - 24px));
+    position: fixed;
+    z-index: 1050;
+    top: 50%;
+    left: clamp(12px, var(--preview-left), calc(100% - var(--preview-width) - 12px));
+    transform: translateY(-50%);
+    width: var(--preview-width);
+    max-height: calc(100% - 24px);
+    object-fit: contain;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
